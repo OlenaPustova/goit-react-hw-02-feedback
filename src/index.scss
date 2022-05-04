@@ -13,3 +13,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.section,
+.notification {
+  padding: 15px;
+}
+
+.section button {
+  margin-right: 10px;
+}
