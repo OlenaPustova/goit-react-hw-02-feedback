@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   const arrOptions = Object.keys(options);
@@ -20,3 +21,8 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
     </>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.object,
+  onLeaveFeedback: PropTypes.func,
+};
