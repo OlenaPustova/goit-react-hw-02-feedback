@@ -36,7 +36,10 @@ class App extends Component {
     return (
       <>
         <Section title="Please leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.changePoint} />
+          <FeedbackOptions
+            options={this.state}
+            onLeaveFeedback={this.changePoint}
+          />
         </Section>
 
         <Section title="Statistics">

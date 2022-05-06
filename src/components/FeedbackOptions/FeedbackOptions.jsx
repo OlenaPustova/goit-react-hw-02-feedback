@@ -1,18 +1,21 @@
-export default function FeedbackOptions({ onLeaveFeedback }) {
+import { nanoid } from 'nanoid';
+
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
+  const arrOptions = Object.keys(options);
   return (
     <>
       <div>
-        <button type="button" name="good" onClick={onLeaveFeedback}>
-          Good
-        </button>
-
-        <button type="button" name="neutral" onClick={onLeaveFeedback}>
-          Neutral
-        </button>
-
-        <button type="button" name="bad" onClick={onLeaveFeedback}>
-          Bad
-        </button>
+        {arrOptions.map(item => (
+          <button
+            key={nanoid()}
+            className="btn"
+            type="button"
+            name={item}
+            onClick={onLeaveFeedback}
+          >
+            {item}
+          </button>
+        ))}
       </div>
     </>
   );
